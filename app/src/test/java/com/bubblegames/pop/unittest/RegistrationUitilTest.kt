@@ -9,9 +9,9 @@ class RegistrationUitilTest{
     fun `empty username returns false`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "",
-            passWord = "334",
-            confirmedPasswoard = "334"
+            username = "",
+            password = "334",
+            confirmedPassword = "334"
         )
         assertThat(result).isFalse()
     }
@@ -21,9 +21,9 @@ class RegistrationUitilTest{
     fun `valid user and correct password`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "tttt",
-            passWord = "334",
-            confirmedPasswoard = "334"
+            username = "iii",
+            password = "334",
+            confirmedPassword = "334"
         )
         assertThat(result).isTrue()
     }
@@ -32,9 +32,9 @@ class RegistrationUitilTest{
     fun ` user already exits return false`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "peter",
-            passWord = "334",
-            confirmedPasswoard = "334"
+            username = "Peter",
+            password = "334",
+            confirmedPassword = "334"
         )
         assertThat(result).isFalse()
     }
@@ -44,9 +44,9 @@ class RegistrationUitilTest{
     fun `no password`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "peter",
-            passWord = "",
-            confirmedPasswoard = ""
+            username = "jjjjjj",
+            password = "",
+            confirmedPassword = ""
         )
         assertThat(result).isFalse()
     }
@@ -55,9 +55,9 @@ class RegistrationUitilTest{
     fun ` password repeated incorrecly`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "peter",
-            passWord = "234",
-            confirmedPasswoard = "333"
+            username = "ee",
+            password = "334",
+            confirmedPassword = "334ee"
         )
         assertThat(result).isFalse()
     }
@@ -67,9 +67,9 @@ class RegistrationUitilTest{
     fun ` password contains less than 2`()
     {
         val result = RegistrationUitil.validateRegistrationInput(
-            userName = "peter",
-            passWord = "2",
-            confirmedPasswoard = "3"
+            username = "fff",
+            password = "4",
+            confirmedPassword = "4"
         )
         assertThat(result).isFalse()
     }
