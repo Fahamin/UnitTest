@@ -28,7 +28,11 @@ class ResourceComparerTest {
     fun stringResouceDifferentAsGivenSring_returnTrue() {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val result = resourceComparer.isEqual(context, R.string.app_name, "dddd")
+<<<<<<< HEAD
         //assertThat(result).isFalse()
+=======
+        assertThat(result).isFalse()
+>>>>>>> origin/master
 
     }
 }
